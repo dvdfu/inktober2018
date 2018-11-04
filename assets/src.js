@@ -35,9 +35,13 @@ function onThumbClick(index) {
       <i class="fas fa-times-circle fa-2x"></i>
     </div>
     <img src="${THUMB_PATH + element.filename}"/>
-    <h1>${element.character}</h1>
-    <h2>${element.series}</h2>
-    <h3>Day ${index + 1} - ${element.prompt}</h3>
+    <header>
+      <h1>${element.character}</h1>
+      <h2>${element.series}</h2>
+      <h3>Day ${index + 1} - ${element.prompt}</h3>
+      <hr>
+      <p>${element.description}</p>
+    </header>
   </div>
 `);
   overlay.show();
