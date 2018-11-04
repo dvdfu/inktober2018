@@ -20,7 +20,7 @@ a {
 #gallery {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #art-thumb {
@@ -29,7 +29,6 @@ a {
 }
 
 #art-thumb img {
-    width: 10em;
     vertical-align: top; /* prevents image container from being a bit larger */
 }
 
