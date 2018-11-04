@@ -17,10 +17,12 @@ $(document).ready(function() {
 function generateThumb(index) {
   const element = artData[index];
   const thumb = $(`
-  <div id="art-thumb" onClick="onThumbClick(${index})">
-    <img src="${THUMB_PATH + element.filename}"/>
-  </div>
-`);
+    <div
+      id="art-thumb"
+      onClick="onThumbClick(${index})"
+      style="background-image: url(${THUMB_PATH + element.filename})">
+    </div>
+  `);
   // thumb.css("background-color", element.color);
   return thumb;
 }
@@ -30,17 +32,15 @@ function onThumbClick(index) {
   const overlay = $("#overlay");
   // overlay.css("background-color", element.color);
   overlay.html(`
+  <div id="exit-fullscreen" onClick="hideFullScreen()">
+    <i class="fas fa-times-circle fa-2x"></i>
+  </div>
   <div class="content">
-    <div id="exit-fullscreen" onClick="hideFullScreen()">
-      <i class="fas fa-times-circle fa-2x"></i>
-    </div>
     <img src="${THUMB_PATH + element.filename}"/>
     <header>
       <h1>${element.character}</h1>
       <h2>${element.series}</h2>
-      <h3>Day ${index + 1} - ${element.prompt}</h3>
-      <hr>
-      <p>${element.description}</p>
+      <h2>Day ${index + 1} - ${element.prompt}</h2>
     </header>
   </div>
 `);
