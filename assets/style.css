@@ -26,6 +26,7 @@ a {
 #art-thumb {
     border-radius: 0.25em;
     margin: 0.25em;
+    cursor: pointer;
 }
 
 #art-thumb img {
@@ -53,4 +54,11 @@ a {
 #overlay .content {
     text-align: center;
     color: #fff;
+}
+
+#exit-fullscreen {
+    cursor: pointer;
+    position: absolute;
+    left: 2em;
+    top: 2em;
 }

@@ -31,6 +31,9 @@ function onThumbClick(index) {
   // overlay.css("background-color", element.color);
   overlay.html(`
   <div class="content">
+    <div id="exit-fullscreen" onClick="hideFullScreen()">
+      <i class="fas fa-times-circle fa-2x"></i>
+    </div>
     <img src="${THUMB_PATH + element.filename}"/>
     <h1>${element.character}</h1>
     <h2>${element.series}</h2>
@@ -44,4 +47,3 @@ function onThumbClick(index) {
 function hideFullScreen() {
   $("#overlay").hide();
 }
-
