@@ -1,0 +1,242 @@
+[
+    {
+        "color": "#ff4142",
+        "character": "Shermy",
+        "filename": "01.png",
+        "prompt": "Weaponry of Choice",
+        "series": "Adventure Time",
+        "subseries": null
+    },
+    {
+        "color": "#29a1f0",
+        "character": "Link",
+        "filename": "02.png",
+        "prompt": "Cooking Supplies",
+        "series": "The Legend of Zelda",
+        "subseries": "Breath of the Wild"
+    },
+    {
+        "color": "#6749a6",
+        "character": "Chandelure",
+        "filename": "03.png",
+        "prompt": "A Lantern",
+        "series": "Pokémon",
+        "subseries": "Black and White"
+    },
+    {
+        "color": "#3966bb",
+        "character": "Sans",
+        "filename": "04.png",
+        "prompt": "A Cool Skull",
+        "series": "UNDERTALE",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "(Protagonist)",
+        "filename": "05.png",
+        "prompt": "Jewellery (Cursed)",
+        "series": "Minit",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Princess Peach",
+        "filename": "06.png",
+        "prompt": "Jewellery (Non-Cursed)",
+        "series": "Super Mario",
+        "subseries": "Odyssey"
+    },
+    {
+        "color": "#888",
+        "character": "Isabelle",
+        "filename": "07.png",
+        "prompt": "Uncommon Currency",
+        "series": "Animal Crossing",
+        "subseries": "New Leaf"
+    },
+    {
+        "color": "#888",
+        "character": "Hinawa",
+        "filename": "08.png",
+        "prompt": "Dried Flowers & Herbs",
+        "series": "MOTHER",
+        "subseries": "MOTHER 3"
+    },
+    {
+        "color": "#888",
+        "character": "Midoriya",
+        "filename": "09.png",
+        "prompt": "A Notebook / Journal",
+        "series": "My Hero Academia",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Appa & Aang",
+        "filename": "10.png",
+        "prompt": "A Map",
+        "series": "Avatar",
+        "subseries": "The Last Airbender"
+    },
+    {
+        "color": "#888",
+        "character": "Ness",
+        "filename": "11.png",
+        "prompt": "A Memento from Home",
+        "series": "MOTHER",
+        "subseries": "Earthbound"
+    },
+    {
+        "color": "#888",
+        "character": "Yoshi",
+        "filename": "12.png",
+        "prompt": "A Key",
+        "series": "Super Mario",
+        "subseries": "Yoshi's Island"
+    },
+    {
+        "color": "#888",
+        "character": "(Frog Captain)",
+        "filename": "13.png",
+        "prompt": "A Pipe",
+        "series": "Over the Garden Wall",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Garnet",
+        "filename": "14.png",
+        "prompt": "A Spare Eye",
+        "series": "Steven Universe",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Asami",
+        "filename": "15.png",
+        "prompt": "A Gauntlet",
+        "series": "Avatar",
+        "subseries": "Legend of Korra"
+    },
+    {
+        "color": "#888",
+        "character": "Simon",
+        "filename": "16.png",
+        "prompt": "An Ancient Crown",
+        "series": "Adventure Time",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Lapis Lazuli",
+        "filename": "17.png",
+        "prompt": "A Magic Item",
+        "series": "Steven Universe",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Moira",
+        "filename": "18.png",
+        "prompt": "Potions",
+        "series": "Overwatch",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Madeline",
+        "filename": "19.png",
+        "prompt": "A Compass",
+        "series": "Celeste",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Toriel",
+        "filename": "20.png",
+        "prompt": "Mittens",
+        "series": "UNDERTALE",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Stevonnie",
+        "filename": "21.png",
+        "prompt": "A Shield",
+        "series": "Steven Universe",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Twilight Sparkle",
+        "filename": "22.png",
+        "prompt": "A Magical Focus",
+        "series": "My Little Pony",
+        "subseries": "Friendship is Magic"
+    },
+    {
+        "color": "#888",
+        "character": "Retsuko",
+        "filename": "23.png",
+        "prompt": "An Instrument",
+        "series": "Aggretsuko",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Marx",
+        "filename": "24.png",
+        "prompt": "Something Divine",
+        "series": "Kirby",
+        "subseries": "Super Star"
+    },
+    {
+        "color": "#888",
+        "character": "Rubick",
+        "filename": "25.png",
+        "prompt": "Something Arcane",
+        "series": "Defense of the Ancients",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Mae",
+        "filename": "26.png",
+        "prompt": "Something Broken",
+        "series": "Night in the Woods",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "BoJack Horseman",
+        "filename": "27.png",
+        "prompt": "A Flask",
+        "series": "BoJack Horseman",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Mabel",
+        "filename": "28.png",
+        "prompt": "A Good Luck Charm",
+        "series": "Gravity Falls",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Chloe & Max",
+        "filename": "29.png",
+        "prompt": "A Telescope",
+        "series": "Life is Strange",
+        "subseries": null
+    },
+    {
+        "color": "#888",
+        "character": "Nabi & Doki",
+        "filename": "30.png",
+        "prompt": "A Gift",
+        "series": "There She Is!!",
+        "subseries": null
+    }
+]

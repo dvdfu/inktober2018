@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0.25em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+}
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#art-thumb {
+    border-radius: 0.25em;
+    margin: 0.25em;
+}
+
+#art-thumb img {
+    width: 10em;
+    vertical-align: top; /* prevents image container from being a bit larger */
+}
+
+#overlay {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #888;
+    overflow: auto;
+    display: none;
+}
+
+.content {
+    font-family: "Helvetica";
+    font-size: 3vmin;
+    padding: 2em;
+}
+
+#overlay .content {
+    text-align: center;
+    color: #fff;
+}
