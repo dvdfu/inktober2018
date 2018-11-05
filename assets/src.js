@@ -59,14 +59,16 @@ function enterFullscreen(index) {
   const element = artData[index];
   const color = colorEnabled ? element.color : GRAY;
 
-  $artImage.attr("src", FULL_PATH + element.filename);
   $artCharacter.html(element.character);
   $artSeries.html(element.series);
   $artPrompt.html("Day " + (index + 1) + " - " + element.prompt);
   $overlay.css("background-color", color);
 
   $overlay.slideDown(ANIM_MS, function() {
-    $artContainer.fadeIn(ANIM_MS);
+    $artImage.attr("src", FULL_PATH + element.filename);
+    $artImage.on("load", function() {
+      $artContainer.fadeIn(ANIM_MS);
+    });
   });
 
   artIndex = index;
