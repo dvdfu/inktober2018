@@ -2,6 +2,7 @@ const THUMB_PATH = "assets/img/thumbs/";
 const FULL_PATH = "assets/img/full/";
 const GRAY = "gray";
 const LIGHT_GRAY = "#ddd";
+const BLUE = "#38c";
 const ANIM_MS = 300;
 
 let $gallery;
@@ -31,6 +32,10 @@ document.body.addEventListener("keydown", function(e) {
         break;
     }
   }
+});
+
+$(document).on("mobileinit", function() {
+  jQuery.mobile.autoInitializePage = false;
 });
 
 $(document).ready(function() {
@@ -109,7 +114,7 @@ function previousEntry() {
 
 function toggleColor() {
   colorEnabled = !colorEnabled;
-  $toggle.css("background-color", colorEnabled ? LIGHT_GRAY : GRAY);
+  $toggle.css("background-color", colorEnabled ? LIGHT_GRAY : BLUE);
 
   for (let i = 0; i < artData.length; i++) {
     const $thumb = $("#thumb-" + i);

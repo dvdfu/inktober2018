@@ -5,12 +5,14 @@
 body {
     margin: 0;
     font-family: "Helvetica";
-    font-size: 24px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    text-shadow: 0 1px 0 #f3f3f3;
 }
 
 @media (max-width: 800px) {
     body {
-        font-size: 3vmin;
+        font-size: 2vmin;
     }
 }
 
@@ -22,6 +24,7 @@ h3 {
 
 a {
     text-decoration: none;
+    color: #38c;
 }
 
 header {
@@ -129,6 +132,10 @@ hr {
     }
 }
 
+#art-container {
+    touch-action: none;
+}
+
 .fullscreen-icon {
     z-index: 2;
     cursor: pointer;
@@ -171,4 +178,8 @@ hr {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.ui-loader {
+    display: none;
 }
