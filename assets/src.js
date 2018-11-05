@@ -17,6 +17,22 @@ let artData = [];
 let artIndex = 0;
 let colorEnabled = true;
 
+document.body.addEventListener("keydown", function(e) {
+  if ($artContainer.is(":visible")) {
+    switch (e.keyCode) {
+      case 27:
+        exitFullscreen();
+        break;
+      case 39:
+        nextEntry();
+        break;
+      case 37:
+        previousEntry();
+        break;
+    }
+  }
+});
+
 $(document).ready(function() {
   $gallery = $("#gallery");
   $overlay = $("#overlay");
