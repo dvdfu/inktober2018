@@ -2,6 +2,7 @@ const THUMB_PATH = "assets/img/thumbs/";
 const FULL_PATH = "assets/img/full/";
 let artData = [];
 let artIndex;
+let colorEnabled = true;
 
 $(document).ready(function() {
   exitFullscreen();
@@ -20,6 +21,7 @@ function generateThumb(index) {
   const thumb = $(`
     <div class="art-thumb-container">
       <div
+        id="thumb-${index}"
         class="art-thumb"
         onClick="enterFullscreen(${index})"
         style="
@@ -35,7 +37,8 @@ function generateThumb(index) {
 function enterFullscreen(index) {
   const element = artData[index];
   const overlay = $("#overlay");
-  overlay.css("background-color", element.color);
+  const color = colorEnabled ? element.color : "#888";
+
   overlay.html(`
     <div
       class="fullscreen-icon"
@@ -55,7 +58,7 @@ function enterFullscreen(index) {
       onClick="enterFullscreen(${index === 29 ? 0 : index + 1})">
       <i class="fas fa-arrow-right fa-2x"></i>
     </div>
-    <div class="content">
+    <div id="art-container" class="content">
       <img src="${FULL_PATH + element.filename}"/>
       <div class="description">
         <h1>${element.character}</h1>
@@ -65,10 +68,32 @@ function enterFullscreen(index) {
       </div>
     </div>
   `);
-  overlay.show();
+  overlay.css("background-color", color);
+
+  const art = $("#art-container");
+  art.hide();
+  overlay.slideDown(200, function() {
+    art.fadeIn(200);
+  });
   artIndex = index;
 }
 
 function exitFullscreen() {
-  $("#overlay").hide();
+  const overlay = $("#overlay");
+  const art = $("#art-container");
+  art.fadeOut(200, function() {
+    overlay.slideUp(200);
+  });
+}
+
+function toggleColors() {
+  const toggle = $("#toggle");
+  colorEnabled = !colorEnabled;
+
+  for (let i = 0; i < artData.length; i++) {
+    const thumb = $("#thumb-" + i);
+    const color = colorEnabled ? artData[i].color : "#ddd";
+    // thumb.stop().animate({ backgroundColor: color }, 300);
+    thumb.css("background-color", color);
+  }
 }

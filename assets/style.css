@@ -46,7 +46,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 2em 0;
+    margin: 2em 0;
 }
 
 .art-thumb-container {
@@ -69,7 +69,12 @@ hr {
     overflow: hidden;
     background-position: center;
     background-size: cover;
-    background-color: #eee;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 #overlay {
@@ -116,7 +121,7 @@ hr {
 }
 
 #exit {
-    left: 2em;
+    right: 2em;
     top: 2em;
 }
 
@@ -138,4 +143,23 @@ hr {
     #next {
         bottom: 50%;
     }
+}
+
+.button {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: #888;
+    max-width: 10em;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button:active {
+    background-color: #ddd;
 }
