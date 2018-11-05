@@ -34,18 +34,19 @@ function onThumbClick(index) {
   const overlay = $("#overlay");
   // overlay.css("background-color", element.color);
   overlay.html(`
-  <div id="exit-fullscreen" onClick="hideFullScreen()">
-    <i class="fas fa-times-circle fa-2x"></i>
-  </div>
-  <div class="content">
-    <img src="${THUMB_PATH + element.filename}"/>
-    <header>
-      <h1>${element.character}</h1>
-      <h2>${element.series}</h2>
-      <h2>Day ${index + 1} - ${element.prompt}</h2>
-    </header>
-  </div>
-`);
+    <div id="exit-fullscreen" onClick="hideFullScreen()">
+      <i class="fas fa-times-circle fa-2x"></i>
+    </div>
+    <div class="content">
+      <img src="${THUMB_PATH + element.filename}"/>
+      <div class="description">
+        <h1>${element.character}</h1>
+        <h2>${element.series}</h2>
+        <hr>
+        <h2>Day ${index + 1} - ${element.prompt}</h2>
+      </div>
+    </div>
+  `);
   overlay.show();
   fullscreen = true;
 }
