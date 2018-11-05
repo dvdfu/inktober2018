@@ -129,3 +129,13 @@ hr {
     right: 2em;
     bottom: 2em;
 }
+
+@media (min-aspect-ratio: 5/4) {
+    #previous {
+        bottom: 50%;
+    }
+
+    #next {
+        bottom: 50%;
+    }
+}
