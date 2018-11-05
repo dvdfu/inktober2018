@@ -32,7 +32,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#626262",
         "character": "(Protagonist)",
         "filename": "05.png",
         "prompt": "Jewellery (Cursed)",
@@ -40,7 +40,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#ff618e",
         "character": "Princess Peach",
         "filename": "06.png",
         "prompt": "Jewellery (Non-Cursed)",
@@ -48,7 +48,7 @@
         "subseries": "Odyssey"
     },
     {
-        "color": "#888",
+        "color": "#ffd061",
         "character": "Isabelle",
         "filename": "07.png",
         "prompt": "Uncommon Currency",
@@ -56,7 +56,7 @@
         "subseries": "New Leaf"
     },
     {
-        "color": "#888",
+        "color": "#ff6453",
         "character": "Hinawa",
         "filename": "08.png",
         "prompt": "Dried Flowers & Herbs",
@@ -64,7 +64,7 @@
         "subseries": "MOTHER 3"
     },
     {
-        "color": "#888",
+        "color": "#29a297",
         "character": "Midoriya",
         "filename": "09.png",
         "prompt": "A Notebook / Journal",
@@ -72,7 +72,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#996b55",
         "character": "Appa & Aang",
         "filename": "10.png",
         "prompt": "A Map",
@@ -80,7 +80,7 @@
         "subseries": "The Last Airbender"
     },
     {
-        "color": "#888",
+        "color": "#3b90ff",
         "character": "Ness",
         "filename": "11.png",
         "prompt": "A Memento from Home",
@@ -88,7 +88,7 @@
         "subseries": "Earthbound"
     },
     {
-        "color": "#888",
+        "color": "#5fd15d",
         "character": "Yoshi",
         "filename": "12.png",
         "prompt": "A Key",
@@ -96,7 +96,7 @@
         "subseries": "Yoshi's Island"
     },
     {
-        "color": "#888",
+        "color": "#91bb47",
         "character": "(Frog Captain)",
         "filename": "13.png",
         "prompt": "A Pipe",
@@ -104,7 +104,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#bd3475",
         "character": "Garnet",
         "filename": "14.png",
         "prompt": "A Spare Eye",
@@ -112,7 +112,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#a62d47",
         "character": "Asami",
         "filename": "15.png",
         "prompt": "A Gauntlet",
@@ -120,7 +120,7 @@
         "subseries": "Legend of Korra"
     },
     {
-        "color": "#888",
+        "color": "#353f94",
         "character": "Simon",
         "filename": "16.png",
         "prompt": "An Ancient Crown",
@@ -128,7 +128,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#1292b5",
         "character": "Lapis Lazuli",
         "filename": "17.png",
         "prompt": "A Magic Item",
@@ -136,7 +136,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#ff7736",
         "character": "Moira",
         "filename": "18.png",
         "prompt": "Potions",
@@ -144,7 +144,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#f0412b",
         "character": "Madeline",
         "filename": "19.png",
         "prompt": "A Compass",
@@ -152,7 +152,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#4c3cd7",
         "character": "Toriel",
         "filename": "20.png",
         "prompt": "Mittens",
@@ -160,7 +160,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#e6406a",
         "character": "Stevonnie",
         "filename": "21.png",
         "prompt": "A Shield",
@@ -168,7 +168,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#8557e2",
         "character": "Twilight Sparkle",
         "filename": "22.png",
         "prompt": "A Magical Focus",
@@ -176,7 +176,7 @@
         "subseries": "Friendship is Magic"
     },
     {
-        "color": "#888",
+        "color": "#ffb13b",
         "character": "Retsuko",
         "filename": "23.png",
         "prompt": "An Instrument",
@@ -184,7 +184,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#ff5ecf",
         "character": "Marx",
         "filename": "24.png",
         "prompt": "Something Divine",
@@ -192,7 +192,7 @@
         "subseries": "Super Star"
     },
     {
-        "color": "#888",
+        "color": "#17c64a",
         "character": "Rubick",
         "filename": "25.png",
         "prompt": "Something Arcane",
@@ -200,7 +200,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#293667",
         "character": "Mae",
         "filename": "26.png",
         "prompt": "Something Broken",
@@ -208,7 +208,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#704242",
         "character": "BoJack Horseman",
         "filename": "27.png",
         "prompt": "A Flask",
@@ -216,7 +216,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#92ec51",
         "character": "Mabel",
         "filename": "28.png",
         "prompt": "A Good Luck Charm",
@@ -224,7 +224,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#1c99e8",
         "character": "Chloe & Max",
         "filename": "29.png",
         "prompt": "A Telescope",
@@ -232,7 +232,7 @@
         "subseries": null
     },
     {
-        "color": "#888",
+        "color": "#ff6566",
         "character": "Nabi & Doki",
         "filename": "30.png",
         "prompt": "A Gift",

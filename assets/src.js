@@ -22,18 +22,20 @@ function generateThumb(index) {
       <div
         class="art-thumb"
         onClick="enterFullscreen(${index})"
-        style="background-image: url(${THUMB_PATH + element.filename})">
+        style="
+          background-image: url(${THUMB_PATH + element.filename});
+          background-color: ${element.color};
+        ">
       </div>
     </div>
   `);
-  // thumb.css("background-color", element.color);
   return thumb;
 }
 
 function enterFullscreen(index) {
   const element = artData[index];
   const overlay = $("#overlay");
-  // overlay.css("background-color", element.color);
+  overlay.css("background-color", element.color);
   overlay.html(`
     <div id="exit-fullscreen" onClick="exitFullscreen()">
       <i class="fas fa-times-circle fa-2x"></i>
