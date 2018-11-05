@@ -1,6 +1,6 @@
 const THUMB_PATH = "assets/img/thumbs/";
 const FULL_PATH = "assets/img/full/";
-const GRAY = "#888";
+const GRAY = "gray";
 const LIGHT_GRAY = "#ddd";
 const ANIM_MS = 300;
 
@@ -54,6 +54,8 @@ function generateThumb(index) {
 }
 
 function enterFullscreen(index) {
+  $artContainer.hide();
+
   const element = artData[index];
   const color = colorEnabled ? element.color : GRAY;
 
@@ -63,7 +65,6 @@ function enterFullscreen(index) {
   $artPrompt.html("Day " + (index + 1) + " - " + element.prompt);
   $overlay.css("background-color", color);
 
-  $artContainer.hide();
   $overlay.slideDown(ANIM_MS, function() {
     $artContainer.fadeIn(ANIM_MS);
   });
@@ -85,12 +86,13 @@ function previousEntry() {
   enterFullscreen(artIndex === 0 ? 29 : artIndex - 1);
 }
 
-function toggleColors() {
+function toggleColor() {
   colorEnabled = !colorEnabled;
+  $toggle.css("background-color", colorEnabled ? LIGHT_GRAY : GRAY);
 
   for (let i = 0; i < artData.length; i++) {
-    const thumb = $("#thumb-" + i);
-    const color = colorEnabled ? artData[i].color : LIGHT_GRAY;
-    thumb.css("background-color", color);
+    const $thumb = $("#thumb-" + i);
+    const color = colorEnabled ? artData[i].color : "transparent";
+    $thumb.css("background-color", color);
   }
 }

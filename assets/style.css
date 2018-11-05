@@ -50,15 +50,27 @@ hr {
 }
 
 .art-thumb-container {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
     width: 12em;
     height: 12em;
     padding: 0.5em;
 }
 
-@media (min-aspect-ratio: 5/4) {
+@media (min-aspect-ratio: 2/3) {
     .art-thumb-container {
-        flex: 1 1 20%;
+        flex: 0 0 33%;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .art-thumb-container {
+        flex: 0 0 20%;
+    }
+}
+
+@media (min-aspect-ratio: 3/2) {
+    .art-thumb-container {
+        flex: 0 0 16%;
     }
 }
 
@@ -68,7 +80,7 @@ hr {
     cursor: pointer;
     overflow: hidden;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: #ddd;
     -webkit-transition: background-color 0.3s;
@@ -150,10 +162,8 @@ hr {
 }
 
 .button {
-    padding: 0.5em;
-    border-radius: 0.5em;
-    background-color: #888;
-    max-width: 10em;
+    padding: 1em;
+    background-color: #ddd;
     text-align: center;
     font-weight: bold;
     color: white;
@@ -162,8 +172,4 @@ hr {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.button:active {
-    background-color: #ddd;
 }
