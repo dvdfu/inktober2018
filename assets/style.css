@@ -88,6 +88,10 @@ hr {
     overflow: hidden;
     display: none;
     color: white;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 #overlay img {

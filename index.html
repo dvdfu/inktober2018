@@ -25,6 +25,33 @@
     <div id="gallery"></div>
   </div>
   <div id="overlay">
+    <div
+      class="fullscreen-icon"
+      id="exit"
+      onClick="exitFullscreen()">
+      <i class="fas fa-times-circle fa-2x"></i>
+    </div>
+    <div
+      class="fullscreen-icon"
+      id="previous"
+      onClick="previousEntry()">
+      <i class="fas fa-arrow-left fa-2x"></i>
+    </div>
+    <div
+      class="fullscreen-icon"
+      id="next"
+      onClick="nextEntry()">
+      <i class="fas fa-arrow-right fa-2x"></i>
+    </div>
+    <div id="art-container" class="content">
+      <img id="art-image"/>
+      <div class="description">
+        <h1 id="art-character"></h1>
+        <h2 id="art-series"></h2>
+        <hr>
+        <h2 id="art-prompt"></h2>
+      </div>
+    </div>
   </div>
 </body>
 </html>

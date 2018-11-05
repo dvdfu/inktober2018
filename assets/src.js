@@ -1,17 +1,36 @@
 const THUMB_PATH = "assets/img/thumbs/";
 const FULL_PATH = "assets/img/full/";
+const GRAY = "#888";
+const LIGHT_GRAY = "#ddd";
+const ANIM_MS = 300;
+
+let $gallery;
+let $overlay;
+let $toggle;
+let $artContainer;
+let $artImage;
+let $artCharacter;
+let $artSeries;
+let $artPrompt;
+
 let artData = [];
-let artIndex;
+let artIndex = 0;
 let colorEnabled = true;
 
 $(document).ready(function() {
-  exitFullscreen();
-  const gallery = $("#gallery");
+  $gallery = $("#gallery");
+  $overlay = $("#overlay");
+  $toggle = $("#toggle");
+  $artContainer = $("#art-container");
+  $artImage = $("#art-image");
+  $artCharacter = $("#art-character");
+  $artSeries = $("#art-series");
+  $artPrompt = $("#art-prompt");
 
   jQuery.getJSON("assets/art.json", function(data) {
     artData = data;
     for (let i = 0; i < data.length; i++) {
-      gallery.append(generateThumb(i));
+      $gallery.append(generateThumb(i));
     }
   });
 });
@@ -36,64 +55,42 @@ function generateThumb(index) {
 
 function enterFullscreen(index) {
   const element = artData[index];
-  const overlay = $("#overlay");
-  const color = colorEnabled ? element.color : "#888";
+  const color = colorEnabled ? element.color : GRAY;
 
-  overlay.html(`
-    <div
-      class="fullscreen-icon"
-      id="exit"
-      onClick="exitFullscreen()">
-      <i class="fas fa-times-circle fa-2x"></i>
-    </div>
-    <div
-      class="fullscreen-icon"
-      id="previous"
-      onClick="enterFullscreen(${index == 0 ? 29 : index - 1})">
-      <i class="fas fa-arrow-left fa-2x"></i>
-    </div>
-    <div
-      class="fullscreen-icon"
-      id="next"
-      onClick="enterFullscreen(${index === 29 ? 0 : index + 1})">
-      <i class="fas fa-arrow-right fa-2x"></i>
-    </div>
-    <div id="art-container" class="content">
-      <img src="${FULL_PATH + element.filename}"/>
-      <div class="description">
-        <h1>${element.character}</h1>
-        <h2>${element.series}</h2>
-        <hr>
-        <h2>Day ${index + 1} - ${element.prompt}</h2>
-      </div>
-    </div>
-  `);
-  overlay.css("background-color", color);
+  $artImage.attr("src", FULL_PATH + element.filename);
+  $artCharacter.html(element.character);
+  $artSeries.html(element.series);
+  $artPrompt.html("Day " + (index + 1) + " - " + element.prompt);
+  $overlay.css("background-color", color);
 
-  const art = $("#art-container");
-  art.hide();
-  overlay.slideDown(200, function() {
-    art.fadeIn(200);
+  $artContainer.hide();
+  $overlay.slideDown(ANIM_MS, function() {
+    $artContainer.fadeIn(ANIM_MS);
   });
+
   artIndex = index;
 }
 
 function exitFullscreen() {
-  const overlay = $("#overlay");
-  const art = $("#art-container");
-  art.fadeOut(200, function() {
-    overlay.slideUp(200);
+  $artContainer.fadeOut(ANIM_MS, function() {
+    $overlay.slideUp(ANIM_MS);
   });
 }
 
+function nextEntry() {
+  enterFullscreen(artIndex === 29 ? 0 : artIndex + 1);
+}
+
+function previousEntry() {
+  enterFullscreen(artIndex === 0 ? 29 : artIndex - 1);
+}
+
 function toggleColors() {
-  const toggle = $("#toggle");
   colorEnabled = !colorEnabled;
 
   for (let i = 0; i < artData.length; i++) {
     const thumb = $("#thumb-" + i);
-    const color = colorEnabled ? artData[i].color : "#ddd";
-    // thumb.stop().animate({ backgroundColor: color }, 300);
+    const color = colorEnabled ? artData[i].color : LIGHT_GRAY;
     thumb.css("background-color", color);
   }
 }
