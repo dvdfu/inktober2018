@@ -1,9 +1,10 @@
 const THUMB_PATH = "assets/img/thumbs/";
+const FULL_PATH = "assets/img/full/";
 let artData = [];
 let fullscreen = false;
 
 $(document).ready(function() {
-  hideFullScreen();
+  exitFullscreen();
   const gallery = $("#gallery");
 
   jQuery.getJSON("assets/art.json", function(data) {
@@ -20,7 +21,7 @@ function generateThumb(index) {
     <div class="art-thumb-container">
       <div
         class="art-thumb"
-        onClick="onThumbClick(${index})"
+        onClick="enterFullscreen(${index})"
         style="background-image: url(${THUMB_PATH + element.filename})">
       </div>
     </div>
@@ -29,16 +30,16 @@ function generateThumb(index) {
   return thumb;
 }
 
-function onThumbClick(index) {
+function enterFullscreen(index) {
   const element = artData[index];
   const overlay = $("#overlay");
   // overlay.css("background-color", element.color);
   overlay.html(`
-    <div id="exit-fullscreen" onClick="hideFullScreen()">
+    <div id="exit-fullscreen" onClick="exitFullscreen()">
       <i class="fas fa-times-circle fa-2x"></i>
     </div>
     <div class="content">
-      <img src="${THUMB_PATH + element.filename}"/>
+      <img src="${FULL_PATH + element.filename}"/>
       <div class="description">
         <h1>${element.character}</h1>
         <h2>${element.series}</h2>
@@ -51,6 +52,6 @@ function onThumbClick(index) {
   fullscreen = true;
 }
 
-function hideFullScreen() {
+function exitFullscreen() {
   $("#overlay").hide();
 }
