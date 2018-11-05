@@ -1,7 +1,7 @@
 const THUMB_PATH = "assets/img/thumbs/";
 const FULL_PATH = "assets/img/full/";
 let artData = [];
-let fullscreen = false;
+let artIndex;
 
 $(document).ready(function() {
   exitFullscreen();
@@ -37,8 +37,23 @@ function enterFullscreen(index) {
   const overlay = $("#overlay");
   overlay.css("background-color", element.color);
   overlay.html(`
-    <div id="exit-fullscreen" onClick="exitFullscreen()">
+    <div
+      class="fullscreen-icon"
+      id="exit"
+      onClick="exitFullscreen()">
       <i class="fas fa-times-circle fa-2x"></i>
+    </div>
+    <div
+      class="fullscreen-icon"
+      id="previous"
+      onClick="enterFullscreen(${index == 0 ? 29 : index - 1})">
+      <i class="fas fa-arrow-left fa-2x"></i>
+    </div>
+    <div
+      class="fullscreen-icon"
+      id="next"
+      onClick="enterFullscreen(${index === 29 ? 0 : index + 1})">
+      <i class="fas fa-arrow-right fa-2x"></i>
     </div>
     <div class="content">
       <img src="${FULL_PATH + element.filename}"/>
@@ -51,7 +66,7 @@ function enterFullscreen(index) {
     </div>
   `);
   overlay.show();
-  fullscreen = true;
+  artIndex = index;
 }
 
 function exitFullscreen() {

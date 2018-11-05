@@ -109,10 +109,23 @@ hr {
     }
 }
 
-#exit-fullscreen {
+.fullscreen-icon {
     z-index: 2;
     cursor: pointer;
     position: absolute;
+}
+
+#exit {
     left: 2em;
     top: 2em;
+}
+
+#previous {
+    left: 2em;
+    bottom: 2em;
+}
+
+#next {
+    right: 2em;
+    bottom: 2em;
 }
