@@ -5,7 +5,13 @@
 body {
     margin: 0;
     font-family: "Helvetica";
-    font-size: 3vmin;
+    font-size: 24px;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 3vmin;
+    }
 }
 
 h1,
@@ -24,12 +30,6 @@ header {
     margin: auto;
 }
 
-@media only screen and (min-width: 800px) {
-    body {
-        font-size: 24px;
-    }
-}
-
 #gallery {
     display: flex;
     flex-flow: row wrap;
@@ -37,22 +37,21 @@ header {
     padding: 2em 0;
 }
 
-#art-thumb {
-    flex: 1 0 50%;
+.art-thumb-container {
+    flex: 1 1 33%;
     width: 12em;
     height: 12em;
+    padding: 0.5em;
+}
+
+.art-thumb {
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     overflow: hidden;
-    border: 0.5em solid white;
     background-position: center;
     background-size: cover;
     background-color: #eee;
-}
-
-@media only screen and (min-width: 800px) {
-    #art-thumb {
-        flex: 1 0 20%;
-    }
 }
 
 #overlay {
@@ -65,14 +64,11 @@ header {
     background-color: #888;
     overflow: auto;
     display: none;
-    text-align: center;
     color: white;
 }
 
 #overlay img {
     margin: auto;
-    width: 100%;
-    max-width: 720px;
 }
 
 #overlay header {
@@ -80,10 +76,12 @@ header {
 }
 
 #overlay .content {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 
 #exit-fullscreen {

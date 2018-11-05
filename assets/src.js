@@ -17,10 +17,12 @@ $(document).ready(function() {
 function generateThumb(index) {
   const element = artData[index];
   const thumb = $(`
-    <div
-      id="art-thumb"
-      onClick="onThumbClick(${index})"
-      style="background-image: url(${THUMB_PATH + element.filename})">
+    <div class="art-thumb-container">
+      <div
+        class="art-thumb"
+        onClick="onThumbClick(${index})"
+        style="background-image: url(${THUMB_PATH + element.filename})">
+      </div>
     </div>
   `);
   // thumb.css("background-color", element.color);
