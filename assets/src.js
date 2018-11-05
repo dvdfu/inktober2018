@@ -27,6 +27,9 @@ $(document).ready(function() {
   $artSeries = $("#art-series");
   $artPrompt = $("#art-prompt");
 
+  $artContainer.on("swipeleft", nextEntry);
+  $artContainer.on("swiperight", previousEntry);
+
   jQuery.getJSON("assets/art.json", function(data) {
     artData = data;
     for (let i = 0; i < data.length; i++) {
