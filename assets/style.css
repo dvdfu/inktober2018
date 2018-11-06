@@ -90,21 +90,21 @@ hr {
     padding-top: 50%;
 }
 
-@media (min-aspect-ratio: 2/3) {
+@media (min-aspect-ratio: 1/1) {
     .art-container.thumb {
         width: 33%;
         padding-top: 33%;
     }
 }
 
-@media (min-aspect-ratio: 1/1) {
+@media (min-aspect-ratio: 3/2) {
     .art-container.thumb {
         width: 20%;
         padding-top: 20%;
     }
 }
 
-@media (min-aspect-ratio: 3/2) {
+@media (min-aspect-ratio: 2/1) {
     .art-container.thumb {
         width: 16%;
         padding-top: 16%;
