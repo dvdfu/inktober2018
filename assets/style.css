@@ -18,10 +18,10 @@ body {
 h1,
 h2,
 p {
-    text-size-adjust: 200%;
-    -ms-text-size-adjust: 200%;
-    -moz-text-size-adjust: 200%;
-    -webkit-text-size-adjust: 200%; /* Flexbox affects iOS text size somehow */
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; /* Flexbox affects iOS text size somehow */
 }
 
 h1 {
