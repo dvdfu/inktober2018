@@ -8,7 +8,7 @@ const ANIM_MS = 300;
 let $gallery;
 let $overlay;
 let $toggle;
-let $artContainer;
+let $fullscreenContent;
 let $artImage;
 let $artCharacter;
 let $artSeries;
@@ -19,7 +19,7 @@ let artIndex = 0;
 let colorEnabled = true;
 
 document.body.addEventListener("keydown", function(e) {
-  if ($artContainer.is(":visible")) {
+  if ($fullscreenContent.is(":visible")) {
     switch (e.keyCode) {
       case 27:
         exitFullscreen();
@@ -42,14 +42,14 @@ $(document).ready(function() {
   $gallery = $("#gallery");
   $overlay = $("#overlay");
   $toggle = $("#toggle");
-  $artContainer = $("#art-container");
+  $fullscreenContent = $("#overlay .content");
   $artImage = $("#art-image");
   $artCharacter = $("#art-character");
   $artSeries = $("#art-series");
   $artPrompt = $("#art-prompt");
 
-  $artContainer.on("swipeleft", nextEntry);
-  $artContainer.on("swiperight", previousEntry);
+  $fullscreenContent.on("swipeleft", nextEntry);
+  $fullscreenContent.on("swiperight", previousEntry);
 
   jQuery.getJSON("assets/art.json", function(data) {
     artData = data;
@@ -62,15 +62,14 @@ $(document).ready(function() {
 function generateThumb(index) {
   const element = artData[index];
   const thumb = $(`
-    <div class="art-thumb-container">
-      <div
-        id="thumb-${index}"
-        class="art-thumb"
-        onClick="enterFullscreen(${index})"
-        style="
-          background-image: url(${THUMB_PATH + element.filename});
-          background-color: ${element.color};
-        ">
+    <div class="art-container thumb">
+      <div class="art-padding">
+        <img
+          id="thumb-${index}"
+          onClick="enterFullscreen(${index})"
+          src="${THUMB_PATH + element.filename}"
+          style="background-color: ${element.color};">
+        </img>
       </div>
     </div>
   `);
@@ -78,7 +77,7 @@ function generateThumb(index) {
 }
 
 function enterFullscreen(index) {
-  $artContainer.hide();
+  $fullscreenContent.hide();
 
   const element = artData[index];
   const color = colorEnabled ? element.color : GRAY;
@@ -91,7 +90,7 @@ function enterFullscreen(index) {
   $overlay.slideDown(ANIM_MS, function() {
     $artImage.attr("src", FULL_PATH + element.filename);
     $artImage.on("load", function() {
-      $artContainer.fadeIn(ANIM_MS);
+      $fullscreenContent.fadeIn(ANIM_MS);
     });
   });
 
@@ -99,7 +98,7 @@ function enterFullscreen(index) {
 }
 
 function exitFullscreen() {
-  $artContainer.fadeOut(ANIM_MS, function() {
+  $fullscreenContent.fadeOut(ANIM_MS, function() {
     $overlay.slideUp(ANIM_MS);
   });
 }
