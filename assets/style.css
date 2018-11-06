@@ -53,7 +53,9 @@ hr {
 }
 
 .button {
-    padding: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 2em 0;
     background-color: #ddd;
     text-align: center;
     font-weight: bold;
