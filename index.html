@@ -12,7 +12,7 @@
   <script src="assets/src.js"></script>
 
   <div class="content">
-    <header>
+    <div class="header">
       <h1>#inktober2018</h1>
       <h2><a href="https://www.twitter.com/dvdfu">@dvdfu</a></h2>
       <p><a href="https://www.inktober.com">Inktober</a> is an annual drawing challenge where participants draw something for every day in October. For 2018, I followed <a href="https://lordofnowhere-art.tumblr.com/post/178327723499">@lordofnowhere</a>'s prompt list for inspiration and drew 30 of my favourite fictional characters, across dozens of games & animation I love. See how many you can recognize!</p>
@@ -20,27 +20,27 @@
         id="toggle"
         class="button"
         onClick="toggleColor()">
-        Colorless
+        <p>Colorless</p>
       </div>
-    </header>
+    </div class="header">
     <div id="gallery"></div>
   </div>
   <div id="overlay">
     <div
       id="exit"
-      class="fullscreen-icon"
+      class="nav-icon"
       onClick="exitFullscreen()">
       <i class="fas fa-times-circle fa-2x"></i>
     </div>
     <div
       id="previous"
-      class="fullscreen-icon"
+      class="nav-icon"
       onClick="previousEntry()">
       <i class="fas fa-arrow-left fa-2x"></i>
     </div>
     <div
       id="next"
-      class="fullscreen-icon"
+      class="nav-icon"
       onClick="nextEntry()">
       <i class="fas fa-arrow-right fa-2x"></i>
     </div>
@@ -50,7 +50,7 @@
           <img id="art-image"/>
         </div>
       </div>
-      <div class="description">
+      <div class="caption">
         <h1 id="art-character"></h1>
         <h2 id="art-series"></h2>
         <hr>
